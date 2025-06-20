@@ -12,8 +12,6 @@
 3. [AI Agents](#ai-agents)  
 4. [Agentic AI](#agentic-ai)  
 5. [Key Differences](#key-differences)  
-6. [Workflow Diagrams](#workflow-diagrams)  
-7. [References & Further Reading](#references--further-reading)
 
 ---
 
