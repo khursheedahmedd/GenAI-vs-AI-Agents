@@ -45,6 +45,16 @@ Large models trained on vast datasets to generate novel content in response to p
 5. **Examples & Frameworks**  
    - OpenAI GPT-4, Mistral, Groq LLM, LangChain integrations, DeepAI.
 
+
+### Workflow
+
+```mermaid
+flowchart LR
+  UserPrompt --> LLM["Generative AI Model"]
+  LLM --> Output["Generated Content"]
+
+```
+
 ---
 
 ## AI Agents
@@ -67,6 +77,19 @@ Systems that **embed** GenAI (LLM) within a **task-specific** agent that can cal
 5. **Examples**  
    - “What’s the current Bitcoin price?” agent → LLM → calls crypto API → responds.
 
+### Workflow
+
+```mermaid
+flowchart LR
+  UserRequest --> Agent["AI Agent"]
+  Agent --> LLM
+  LLM --> ToolCall["Tool / API"]
+  ToolCall --> LLM
+  LLM --> Agent
+  Agent --> UserResponse
+
+```
+
 ---
 
 ## Agentic AI
@@ -87,6 +110,22 @@ A higher-level orchestration of **multiple** AI Agents (and possibly humans) wor
 5. **Examples & Platforms**  
    - AutoGen, Agentic workflows in LangChain, CrewAI, MCP/A2A frameworks.
 
+
+### Workflow
+
+```mermaid
+flowchart TD
+  UserGoal --> MasterAgent["Agentic AI Master"]
+  MasterAgent --> Sub1["Agent 1: Transcription"]
+  MasterAgent --> Sub2["Agent 2: Title/Description"]
+  MasterAgent --> Sub3["Agent 3: SEO/Publish"]
+  Sub1 --> Feedback["Feedback Agent"]
+  Sub2 --> Feedback
+  Sub3 --> Feedback
+  Feedback --> MasterAgent
+  MasterAgent --> FinalDeliverable["Published Blog Post"]
+```
+
 ---
 
 ## Key Differences
@@ -101,11 +140,6 @@ A higher-level orchestration of **multiple** AI Agents (and possibly humans) wor
 
 ---
 
-## Workflow Diagrams
 
-### 1. GenAI (LLM)
 
-```mermaid
-flowchart LR
-  UserPrompt --> LLM["Generative AI Model"]
-  LLM --> Output["Generated Content"]
+
